@@ -1,6 +1,7 @@
 import { Container, Typography, Stack } from '@mui/material'
 import './App.css'
 import { JavaScriptLogo } from './JavaScriptLogo'
+import { Start } from './Start'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
               JavaScript Quizz 
             </Typography>
         </Stack>
+
+        <Start />
       
       </Container>
     
