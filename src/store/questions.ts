@@ -7,13 +7,13 @@ interface State {
     fetchQuestions: (limit: number) => Promise<void>
 }
 
-export const useQuestionsStore = create<State>((set) => {
+export const useQuestionsStore = create<State>((set, get) => {
     return {
         questions: [],
         currentQuestion: 0,
 
         fetchQuestions: async (limit: number) => {
-            console.log('hola')
+            set()
         }
 
     }
