@@ -9,7 +9,7 @@ interface State {
 
 export const useQuestionsStore = create<State>((set, get) => {
     return {
-        questions: [],
+        questions: [], // ----> initial state
         currentQuestion: 0,
 
         fetchQuestions: async (limit: number) => {
@@ -17,6 +17,7 @@ export const useQuestionsStore = create<State>((set, get) => {
             const json = await res.json()
 
             const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
+            set({ questions })
         }
 
     }
