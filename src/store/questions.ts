@@ -9,6 +9,12 @@ interface State {
 
 export const useQuestionsStore = create<State>((set) => {
     return {
+        questions: [],
+        currentQuestion: 0,
+
+        fetchQuestions: async (limit: number) => {
+            console.log('hola')
+        }
 
     }
 
