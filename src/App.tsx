@@ -4,6 +4,7 @@ import { JavaScriptLogo } from './JavaScriptLogo'
 import { Start } from './Start'
 
 function App() {
+  const questions = useQuestionsStore(state => state.questions)
   return (
     <main>
       <Container maxWidth='sm'>
