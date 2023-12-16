@@ -6,3 +6,7 @@ interface State {
     currentQuestion: number
     fetchQuestions: (limit: number) => void
 }
+
+export const useQuestionsStore = create<State>(() => {
+    
+})
