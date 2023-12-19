@@ -1,16 +1,19 @@
 import { IconButton, Stack } from "@mui/material";
 import { useQuestionsStore } from "./store/questions";
+import { type Question as QuestionType} from "./types";
 
-const Question = ({ info }) => {
-    
+const Question = ({ info }: { info: QuestionType }) => {
+    return null
 }
 export const Game = () => {
     const questions = useQuestionsStore(state => state.questions)
     const currentQuestion = useQuestionsStore(state => state.currentQuestion)
-    
+
+    const questionInfo = questions[currentQuestion]
+
     return (
         <>
-        <Question />
+        <Question info={questionInfo} />
         </>
     )
 }
