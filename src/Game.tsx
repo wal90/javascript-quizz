@@ -1,8 +1,12 @@
 import { IconButton, Stack } from "@mui/material";
 
-const Question = () => {
+const Question = ({ info }) => {
     
 }
 export const Game = () => {
-    return ()
+    return (
+        <>
+        <Question />
+        </>
+    )
 }
