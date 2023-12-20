@@ -10,8 +10,11 @@ const Question = ({ info }: { info: QuestionType }) => {
         <Card variant='outlined'>
             <Typography variant='h5'>
                 {info.question}
-
             </Typography>
+ 
+            <SyntaxHighlighter language='javascript' style={gradientDark}>
+                {info.code}
+            </SyntaxHighlighter>
 
         </Card>
     )
