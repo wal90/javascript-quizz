@@ -16,7 +16,10 @@ const darkTheme = createTheme({
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-
-    <App />
+    <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+     <App />   
+    </ThemeProvider>
+    
 
 )
