@@ -1,5 +1,7 @@
 import { IconButton, Stack, Typography } from "@mui/material";
 import { Card } from "@mui/material"
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
 
