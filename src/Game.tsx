@@ -1,4 +1,4 @@
-import { IconButton, Stack, Typography, List } from "@mui/material";
+import { IconButton, Stack, Typography, List, ListItem } from "@mui/material";
 import { Card } from "@mui/material"
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
@@ -17,7 +17,9 @@ const Question = ({ info }: { info: QuestionType }) => {
             </SyntaxHighlighter>
 
             <List sx={{ bgColor: '#333'}}>
-
+                {info.answers.map((answer, index) => (
+                    <ListItem key={index}></ListItem>
+                ))}
             </List>
 
         </Card>
