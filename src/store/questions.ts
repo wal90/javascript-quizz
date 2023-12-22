@@ -8,7 +8,7 @@ interface State {
     selectAnswer: (questionId: number, answerIndex: number) => void
 }
 
-export const useQuestionsStore = create<State>((set) => {
+export const useQuestionsStore = create<State>((set, get) => {
     return {
         questions: [], // ----> initial state
         currentQuestion: 0,
@@ -19,6 +19,12 @@ export const useQuestionsStore = create<State>((set) => {
 
             const questions = json.sort(() => Math.random() - 0.5).slice(0, limit)
             set({ questions })
+        },
+
+        selectAnswer: (questionId: number, answerIndex: number) => {
+            const { questions } = get()
+
+            const newQuestions = structuredClone(questions)
         }
 
     }
