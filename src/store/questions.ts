@@ -8,7 +8,7 @@ interface State {
     selectAnswer: (questionId: number, answerIndex: number) => void
 }
 
-export const useQuestionsStore = create<State>((set, get) => {
+export const useQuestionsStore = create<State>((set) => {
     return {
         questions: [], // ----> initial state
         currentQuestion: 0,
