@@ -32,6 +32,7 @@ export const useQuestionsStore = create<State>((set, get) => {
                 ...questionInfo,
                 isCorrectUserAnswer: answerIndex
             }
+            set({ questions: newQuestions})
         }
 
     }
