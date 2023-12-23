@@ -34,7 +34,8 @@ export const useQuestionsStore = create<State>((set, get) => {
             // cambiar esta información en la copia de la pregunta
             newQuestions[questionIndex] = {
                 ...questionInfo,
-                isCorrectUserAnswer: answerIndex
+                isCorrectUserAnswer,
+                userSelectedAnswer:answerIndex
             }
             // actualizamos el estado
             set({ questions: newQuestions})
