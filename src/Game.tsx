@@ -8,6 +8,7 @@ import { type Question as QuestionType} from "./types";
 const Question = ({ info }: { info: QuestionType }) => {
     const selectAnswer = useQuestionsStore(state => state.selectAnswer)
 
+    // es una funcion que genera otra funcion 
     const createHandleClick = (answerIndex: number) => () => {
         selectAnswer(info.id, answerIndex)
     }
