@@ -6,6 +6,7 @@ import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
 
 const Question = ({ info }: { info: QuestionType }) => {
+    const selectAnswer = useQuestionsStore(state => state.selectAnswer)
     return (
         <Card variant='outlined' sx={{ textAlign: 'left', marginTop:4 }}>
             <Typography variant='h5'>
