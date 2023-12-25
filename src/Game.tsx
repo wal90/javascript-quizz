@@ -13,6 +13,10 @@ const Question = ({ info }: { info: QuestionType }) => {
         selectAnswer(info.id, answerIndex)
     }
 
+    const getBackgroundColor = (index: number) => {
+        
+    }
+
     return (
         <Card variant='outlined' sx={{ textAlign: 'left', marginTop:4 }}>
             <Typography variant='h5'>
