@@ -5,18 +5,18 @@ import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
 
+const getBackgroundColor = (info: QuestionType, index: number) => {
+    const { userSelectedAnswer, correctAnswer } = info
+
+    return 'transparent'
+}
+
 const Question = ({ info }: { info: QuestionType }) => {
     const selectAnswer = useQuestionsStore(state => state.selectAnswer)
 
     // es una funcion que genera otra funcion 
     const createHandleClick = (answerIndex: number) => () => {
         selectAnswer(info.id, answerIndex)
-    }
-
-    const getBackgroundColor = (index: number) => {
-        const { userSelectedAnswer, correctAnswer } = info
-
-        return 'transparent'
     }
 
     return (
@@ -33,7 +33,7 @@ const Question = ({ info }: { info: QuestionType }) => {
                 {info.answers.map((answer, index) => (
                     <ListItem key={index} disablePadding divider>
                         <ListItemButton onClick={createHandleClick(index)}
-                        sx={{ backgroundColor : getBackgroundColor(index)}}>
+                        sx={{ backgroundColor : getBackgroundColor(info, index)}}>
                             <ListItemText primary={answer} sx={{ textAlign: 'center' }}/>
                         </ListItemButton>
                     </ListItem>
