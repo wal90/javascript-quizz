@@ -9,7 +9,9 @@ const getBackgroundColor = (info: QuestionType, index: number) => {
     const { userSelectedAnswer, correctAnswer } = info
 
     // usuerio no ha seleccionado nada todavia
-    if (userSelectedAnswer == nul) return 'transparent'
+    if (userSelectedAnswer == null) return 'transparent'
+    // si ya selecciono pero la solución es incorrecta
+    if ( index !== correctAnswer && index !== userSelectedAnswer) return 'transparent'
 
     return 'transparent'
 }
