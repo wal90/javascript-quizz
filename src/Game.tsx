@@ -12,6 +12,8 @@ const getBackgroundColor = (info: QuestionType, index: number) => {
     if (userSelectedAnswer == null) return 'transparent'
     // si ya selecciono pero la solución es incorrecta
     if ( index !== correctAnswer && index !== userSelectedAnswer) return 'transparent'
+    // si es la solución correcta
+    if (index === correctAnswer) return 'green'
 
     return 'transparent'
 }
