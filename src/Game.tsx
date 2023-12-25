@@ -14,7 +14,7 @@ const Question = ({ info }: { info: QuestionType }) => {
     }
 
     const getBackgroundColor = (index: number) => {
-        
+        const { userSelectedAnswer, correctAnswer } = info
     }
 
     return (
