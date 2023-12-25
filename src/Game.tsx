@@ -8,6 +8,9 @@ import { type Question as QuestionType} from "./types";
 const getBackgroundColor = (info: QuestionType, index: number) => {
     const { userSelectedAnswer, correctAnswer } = info
 
+    // usuerio no ha seleccionado nada todavia
+    if (userSelectedAnswer == nul) return 'transparent'
+
     return 'transparent'
 }
 
