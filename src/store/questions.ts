@@ -41,13 +41,13 @@ export const useQuestionsStore = create<State>((set, get) => {
             }
             // actualizamos el estado
             set({ questions: newQuestions})
-        }
+        },
 
         goNextQuestion: ()  => {
-            const { currentQuestion, question } = get()
-            const goNextQuestion = currentQuestion +1
+            const { currentQuestion, questions } = get()
+            const nextQuestion = currentQuestion +1
         
-            if (goNextQuestion < question.length){
+            if (nextQuestion < questions.length){
                 set({ currentQuestion: nextQuestion })
             }}
     }
