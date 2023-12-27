@@ -43,6 +43,15 @@ export const useQuestionsStore = create<State>((set, get) => {
             set({ questions: newQuestions})
         }
 
+        goNextQuestion: ()  => {
+            const { currentQuestion, question } = get()
+            const goNextQuestion = currentQuestion +1
+        
+            if (goNextQuestion < question.length){
+                set({ currentQuestion: nextQuestion })
+            }}
     }
+
+
 
 })
