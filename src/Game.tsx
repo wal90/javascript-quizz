@@ -5,6 +5,8 @@ import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
 
+
+//funcion que se crea una vez
 const getBackgroundColor = (info: QuestionType, index: number) => {
     const { userSelectedAnswer, correctAnswer } = info
 
