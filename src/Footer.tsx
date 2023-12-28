@@ -11,8 +11,8 @@ export const Footer = () => {
         const { userSelectedAnswer, correctAnswer } = question
 
         if (userSelectedAnswer == null) unanswered++
-        if (userSelectedAnswer === correctAnswer) correct++
-        if (userSelectedAnswer !== correctAnswer) incorrect++
+        else if (userSelectedAnswer === correctAnswer) correct++
+        else incorrect++
     })
     return (
         <footer style={{ marginTop: '16px '}}>
