@@ -16,7 +16,7 @@ export const Footer = () => {
     })
     return (
         <footer style={{ marginTop: '16px '}}>
-            <strong>{`✅ {}`}</strong>
+            <strong>{`✅ ${correct} - ❌ ${incorrect} - ❓ ${unanswered} `}</strong>
 
         </footer>
     )
