@@ -5,6 +5,7 @@ import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
 import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
+import { Footer } from "./Footer";
 
 
 //funcion que se crea una vez
@@ -80,6 +81,8 @@ export const Game = () => {
             </IconButton>
         </Stack>
         <Question info={questionInfo} />
+        <Footer />
+
         </>
     )
 }
