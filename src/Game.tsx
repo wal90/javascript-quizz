@@ -4,7 +4,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
-import { ArrowBackIosNew } from "@mui/icons-material";
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 
 
 //funcion que se crea una vez
@@ -71,6 +71,10 @@ export const Game = () => {
         <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
             <IconButton onClick={goPreviousQuestion} disabled={currentQuestion === 0}>
                 <ArrowBackIosNew />
+            </IconButton>
+
+            <IconButton onClick={goNextQuestion} disabled={currentQuestion > questions.length -1}>
+                <ArrowForwardIos />
             </IconButton>
         </Stack>
         <Question info={questionInfo} />
