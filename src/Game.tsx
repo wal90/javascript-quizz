@@ -1,9 +1,10 @@
-import { Typography, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import { Typography, List, ListItem, ListItemButton, ListItemText, IconButton, Stack } from "@mui/material";
 import { Card } from "@mui/material"
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { gradientDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { useQuestionsStore } from "./store/questions";
 import { type Question as QuestionType} from "./types";
+import { ArrowBackIosNew } from "@mui/icons-material";
 
 
 //funcion que se crea una vez
@@ -67,6 +68,11 @@ export const Game = () => {
 
     return (
         <>
+        <Stack direction='row' gap={2} alignItems='center' justifyContent='center'>
+            <IconButton onClick={goPreviousQuestion} disabled={currentQuestion === 0}>
+                <ArrowBackIosNew />
+            </IconButton>
+        </Stack>
         <Question info={questionInfo} />
         </>
     )
