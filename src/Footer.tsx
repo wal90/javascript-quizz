@@ -6,6 +6,14 @@ export const Footer = () => {
     let correct = 0
     let incorrect = 0
     let unanswered = 0
+
+    questions.forEach(question => {
+        const { userSelectedAnswer, correctAnswer } = question
+
+        if (userSelectedAnswer == null) unanswered++
+        if (userSelectedAnswer === correctAnswer) correct++
+        if (userSelectedAnswer !== correctAnswer) incorrect++
+    })
     return (
         <footer style={{ marginTop: '16px '}}>
             <strong>{`✅ {}`}</strong>
