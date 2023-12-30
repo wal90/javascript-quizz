@@ -1,6 +1,7 @@
 import { useQuestionsStore } from "./store/questions"
 
-export const Footer = () => {
+
+const useQuestionData = () => {
     const questions = useQuestionsStore(state=> state.questions)
 
     let correct = 0
@@ -14,6 +15,12 @@ export const Footer = () => {
         else if (userSelectedAnswer === correctAnswer) correct++
         else incorrect++
     })
+
+    return { correct, incorrect, unanswered }
+}
+
+export const Footer = () => {
+   
     return (
         <footer style={{ marginTop: '16px '}}>
             <strong>{`✅ ${correct} correctas - ❌ ${incorrect} incorrectas - ❓ ${unanswered} sin responder`}</strong>
