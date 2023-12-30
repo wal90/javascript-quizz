@@ -12,7 +12,7 @@ interface State {
     goPreviousQuestion: () => void
 }
 
-export const useQuestionsStore = create<State>((set, get) => {
+export const useQuestionsStore = create<State>()(persist((set, get) => {
     return {
         questions: [], // ----> initial state
         currentQuestion: 0,
@@ -66,4 +66,6 @@ export const useQuestionsStore = create<State>((set, get) => {
 
 
 
-})
+},{
+name: "questions"
+}))
