@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { type Question } from "../types"
 import confetti from "canvas-confetti"
+import { persist } from "zustand/middleware"
 
 interface State {
     questions: Question[]
