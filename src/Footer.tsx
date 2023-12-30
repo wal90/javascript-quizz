@@ -1,7 +1,4 @@
-import { useQuestionsStore } from "./store/questions"
-
-
-
+import { useQuestionData } from "./hooks/useQuestionsData"
 
 export const Footer = () => {
 
