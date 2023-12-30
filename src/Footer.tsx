@@ -20,6 +20,8 @@ const useQuestionData = () => {
 }
 
 export const Footer = () => {
+
+    const { correct, incorrect, unanswered } = useQuestionData()
    
     return (
         <footer style={{ marginTop: '16px '}}>
